@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux';
 import './heroBanner.scss'
 
 import useFetch from '../../../hooks/useFetch';
-import Img from '../../../components/LazyLoadImages/Img';
-import ContentWrapper from '../../../components/ContentWrapper/ContentWrapper';
+import Img from '../../../components/lazyLoadImages/Img';
+import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
 
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
