@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 import ContentWrapper from "../ContentWrapper/ContentWrapper";
 import Img from "../lazyLoadImages/Img";
 import PosterFallback from "../../assets/no-poster.png";
-import CircleRating from "../CircleRating/CircleRating";
+import CircleRating from "../CircleRating/CircleRating.jsx";
 // import Genres from "../genres/Genres";
 
 import "./carousel.scss";
