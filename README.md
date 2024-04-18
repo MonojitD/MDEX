@@ -1,6 +1,7 @@
 # MDEX - Movie Database Application 🎬
 
-MDEX is a comprehensive movie database application built using React.js. Inspired by IMDb, it offers users a platform to explore a vast collection of movies, TV shows, and other media content. With an intuitive user interface, MDEX provides features for browsing, searching, and discovering information about various films and television series.
+MDEX is a comprehensive movie database application built using React.js. Inspired by IMDb, it offers users a platform to explore a vast collection of movies, TV shows, and other media content. With an intuitive user interface, MDEX provides features for browsing, searching, and discovering information about various films and television series. 
+The project is not completed yet.
 
 ## Features 🌟
 
@@ -14,7 +15,7 @@ MDEX is a comprehensive movie database application built using React.js. Inspire
 - React.js
 - JavaScript
 - HTML5
-- CSS3
+- SCSS
 
 ## Getting Started 🚀
 
