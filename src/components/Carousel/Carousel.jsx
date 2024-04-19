@@ -11,7 +11,7 @@ import ContentWrapper from "../contentWrapper/ContentWrapper.jsx";
 import Img from "../lazyLoadImages/Img.jsx"
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating.jsx";
-// import Genres from "../genres/Genres";
+import Genres from "../genres/Genres.jsx";
 
 import "./carousel.scss";
 
@@ -85,9 +85,10 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                                 1
                                             )}
                                         />
-                                        {/* <Genres
-                                            data={item.genre_ids.slice(0, 2)}
-                                        /> */}
+                                        <Genres
+                                            data={item.genre_ids}
+                                            // data={item.genre_ids.slice(0, 2)}
+                                        />
                                     </div>
                                     <div className="textBlock">
                                         <span className="title">
