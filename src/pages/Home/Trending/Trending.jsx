@@ -11,8 +11,8 @@ const Trending = () => {
     
 
     const { data, loading } = useFetch(`/trending/movie/${endpoint}`);
-    const dataTv = useFetch(`/trending/tv/${endpoint}`);
-    console.log(dataTv)
+    const { data: dataTv, loading: loadingTv } = useFetch(`/trending/tv/${endpoint}`);
+    // console.log(dataTv)
 
     const onTabChange = (tab) => {
         setEndpoint(tab === "Day" ? "day" : "week");
@@ -26,7 +26,7 @@ const Trending = () => {
                 <SwitchTabs data={["Day", "Week"]} onTabChange={onTabChange} />
             </ContentWrapper>
             <Carousel data={data?.results} loading={loading} />
-            <Carousel data={dataTv?.data?.results} loading={dataTv.loading} />
+            <Carousel data={dataTv?.results} loading={loadingTv} />
         </div>
     );
 };
