@@ -4,10 +4,10 @@ import { fetchDataFromApi } from "./utils/api"
 import { useSelector, useDispatch } from 'react-redux'
 import { getApiConfiguration, getGenres } from "./store/homeSlice"
 
-import Header from "./components/Header/Header"
-import Footer from "./components/Footer/Footer"
+import Header from "./components/header/Header"
+import Footer from "./components/footer/Footer"
 import Home from "./pages/Home/Home"
-import Details from "./pages/Details/Details"
+import Details from "./pages/details/Details"
 import Explore from "./pages/Explore/Explore"
 import SearchResult from "./pages/SearchResult/SearchResult"
 import NotFound from "./pages/404/NotFound"

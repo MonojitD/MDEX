@@ -1,8 +1,8 @@
 import './home.scss'
 
-import HeroBanner from './HeroBanner/HeroBanner'
-import Trending from './Trending/Trending'
-import Popular from './Popular/Popular'
+import HeroBanner from './heroBanner/HeroBanner'
+import Trending from './trending/Trending'
+import Popular from './popular/Popular'
 import TopRated from './topRated/TopRated'
 import Upcoming from './upcoming/Upcoming'
 
