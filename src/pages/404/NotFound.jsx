@@ -1,10 +1,18 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React from "react";
+
+import "./not-found.scss";
+
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 
 const NotFound = () => {
-  return (
-    <div>NotFound</div>
-  )
-}
+    return (
+        <div className="pageNotFound">
+            <ContentWrapper>
+                <span className="bigText">404</span>
+                <span className="smallText">Page not found!</span>
+            </ContentWrapper>
+        </div>
+    );
+};
 
-export default NotFound
+export default NotFound;
