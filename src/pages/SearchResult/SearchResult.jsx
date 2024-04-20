@@ -6,7 +6,7 @@ const TMDB_KEY = import.meta.env.VITE_APP_TMDB_KEY;
 import "./search-result.scss";
 
 import { fetchDataFromApi } from "../../utils/api";
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper.jsx";
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
 import noResults from "../../assets/no-results.png";

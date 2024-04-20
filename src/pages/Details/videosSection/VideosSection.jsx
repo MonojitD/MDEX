@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./videos-section.scss";
 
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+import ContentWrapper from "../../../components/contentWrapper/ContentWrapper.jsx";
 import VideoPopup from "../../../components/videoPopup/VideoPopup";
 import Img from "../../../components/lazyLoadImages/Img";
 import { PlayIcon } from "../Playbtn";
