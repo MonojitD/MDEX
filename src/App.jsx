@@ -9,7 +9,7 @@ import Footer from "./components/footer/Footer"
 import Home from "./pages/Home/Home"
 import Details from "./pages/details/Details"
 import Explore from "./pages/Explore/Explore"
-import SearchResult from "./pages/SearchResult/SearchResult"
+import SearchResult from "./pages/searchResult/SearchResult"
 import NotFound from "./pages/404/NotFound"
 
 
