@@ -13,9 +13,9 @@ MDEX is a comprehensive movie database application built using React.js. Inspire
 ## Technologies Used 💻
 
 - React.js
-- JavaScript
-- HTML5
 - SCSS
+- Axios
+- Vite
 
 ## Getting Started 🚀
 
@@ -39,7 +39,7 @@ To get started with MDEX, follow these steps:
    npm start
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
+4. Open [https://mdex.vercel.app/](https://mdex.vercel.app/) to view the application in your browser.
 
 ## Contributing 🤝
 
@@ -55,4 +55,4 @@ Special thanks to IMDb for inspiration and to the React.js community for providi
 
 ---
 
-Happy movie browsing! 🍿🎥
+Happy movie browsing & watching! 🍿🎥

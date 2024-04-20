@@ -1,6 +1,7 @@
 import React from "react";
 import {
-    FaFacebookF,
+    // FaFacebookF,
+    FaGithub,
     FaInstagram,
     FaTwitter,
     FaLinkedin,
@@ -9,39 +10,35 @@ import {
 import ContentWrapper from "../contentWrapper/ContentWrapper.jsx";
 
 import "./footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <footer className="footer">
             <ContentWrapper>
-                <ul className="menuItems">
+                {/* <ul className="menuItems">
                     <li className="menuItem">Terms Of Use</li>
                     <li className="menuItem">Privacy-Policy</li>
                     <li className="menuItem">About</li>
                     <li className="menuItem">Blog</li>
                     <li className="menuItem">FAQ</li>
-                </ul>
+                </ul> */}
                 <div className="infoText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                As a devoted moviemaniac, I've brought my passion for cinema to life in this space. Discover a curated collection of films and series, from blockbusters to hidden gems, celebrating the magic of storytelling. Dive into a world where every frame is a journey, every scene an adventure. Join me on this cinematic odyssey, where the love for movies and series knows no bounds. Lights, Camera, Action ! Welcome to <b>MDEX</b>- Movie-Doobie EntertainmentX.
                 </div>
                 <div className="socialIcons">
-                    <span className="icon">
-                        <FaFacebookF />
-                    </span>
-                    <span className="icon">
+                    <Link to="https://github.com/MonojitD" target="_blank" className="icon">
+                        <FaGithub />
+                    </Link>
+                    <Link to="https://www.instagram.com/monojit.deb/" target="_blank" className="icon">
                         <FaInstagram />
-                    </span>
-                    <span className="icon">
+                    </Link>
+                    <Link to="https://twitter.com/monojitdeb1" target="_blank" className="icon">
                         <FaTwitter />
-                    </span>
-                    <span className="icon">
+                    </Link>
+                    <Link to="https://www.linkedin.com/in/monojitdeb" target="_blank" className="icon">
                         <FaLinkedin />
-                    </span>
+                    </Link>
                 </div>
             </ContentWrapper>
         </footer>
