@@ -12,7 +12,7 @@ import ErrorModal from '../../../components/errorModal/ErrorModal.jsx';
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
-  // const [error, setError] = useState("");
+  const [dataVal, setDataVal] = useState(null);
   // console.log(error)
 
   const navigate = useNavigate();
@@ -27,11 +27,21 @@ const HeroBanner = () => {
   const baseBackdropURL = 'https://image.tmdb.org/t/p/original';
 
   useEffect(() => {
+    setDataVal(data)
     // const bg = url.backdrop + data?.results[Math.floor(Math.random() * 21)]?.backdrop_path;
     // const bg = baseBackdropURL + data?.results[Math.floor(Math.random() * 21)]?.backdrop_path;
     const bg = `${data != "Network Error" ? baseBackdropURL + data?.results[Math.floor(Math.random() * 21)]?.backdrop_path : ""}`;
     setBackground(bg);
   }, [data])
+
+  console.log("Start")
+  setTimeout(() => {
+    console.log(new Date().getTime())
+    if(loading) {
+      setDataVal("Network Error");
+      console.log("End")
+    }
+  }, 20000)
 
   const searchQueryHandler = (event) => {
     if(event.key === "Enter" && query.length > 0) {
@@ -49,15 +59,15 @@ const HeroBanner = () => {
       <div className="opacity_layer"></div>
       <ContentWrapper>
         <div className="hero_banner_content">
-          <span className="title">{loading ? loading : data === "Network Error" ? "Oops !" : "Welcome."}</span>
-          <span className="sub_title">Millions of movies, TV shows and people to discover. Explore now.</span>
+          <span className="title">{loading ? "Loading..." : dataVal === "Network Error" ? "Oops !" : "Welcome."}</span>
+          <span className="sub_title">{loading ? "Please wait a minute. We are trying to get data." : "Millions of movies, TV shows and people to discover. Explore now."}</span>
           <div className="search_input">
             <input type="text" name="" id="" placeholder='Search for a movie or tv show...' onKeyUp={searchQueryHandler} onChange={(e) => setQuery(e.target.value)}/>
             <button onClick={() => navigate(`/search/${query}`)}>Search</button>
           </div>
         </div>
       </ContentWrapper>
-      {data === "Network Error" ? <ErrorModal errorMessage={data} onClose={() => console.log("Closeee")} /> : ""}
+      {dataVal === "Network Error" ? <ErrorModal errorMessage={dataVal} /> : ""}
     </div>
   )
 }
