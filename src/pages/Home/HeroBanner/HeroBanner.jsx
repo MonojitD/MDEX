@@ -7,22 +7,29 @@ import './heroBanner.scss'
 import useFetch from '../../../hooks/useFetch.jsx';
 import Img from '../../../components/lazyLoadImages/Img.jsx';
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper.jsx';
+import ErrorModal from '../../../components/errorModal/ErrorModal.jsx';
 
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
+  // const [error, setError] = useState("");
+  // console.log(error)
 
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
 
 
-  const { data, loading } = useFetch("/movie/upcoming");
+  const { data, loading, error } = useFetch("/movie/upcoming");
+  // console.log(data.response)
+  // console.log(loading)
+  console.log(error)
 
   const baseBackdropURL = 'https://image.tmdb.org/t/p/original';
 
   useEffect(() => {
     // const bg = url.backdrop + data?.results[Math.floor(Math.random() * 21)]?.backdrop_path;
-    const bg = baseBackdropURL + data?.results[Math.floor(Math.random() * 21)]?.backdrop_path;
+    // const bg = baseBackdropURL + data?.results[Math.floor(Math.random() * 21)]?.backdrop_path;
+    const bg = `${data != "Network Error" ? baseBackdropURL + data?.results[Math.floor(Math.random() * 21)]?.backdrop_path : ""}`;
     setBackground(bg);
   }, [data])
 
@@ -50,6 +57,7 @@ const HeroBanner = () => {
           </div>
         </div>
       </ContentWrapper>
+      {data === "Network Error" ? <ErrorModal errorMessage={data} onClose={() => console.log("Closeee")} /> : ""}
     </div>
   )
 }

@@ -1,0 +1,85 @@
+/* Add this CSS to your styles file */
+@import "../../mixins.scss";
+.modal {
+    display: block; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    .modal-content {
+        width: 80%; 
+        background-color: #00000060;
+        backdrop-filter: blur(5px);
+        border-radius: 1rem;
+        box-shadow: 0px 0px 45px 10px #aa2ecd6d;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #aa2ecd80;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include md {
+            width: 50%;
+        }
+        img {
+            width: 10rem;
+        }
+        .error_titile {
+            color: #ff2058;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .error_msg {
+            color: #c2c2c2;
+            font-size: 0.9rem;
+            line-height: 1.2;
+            text-align: center;
+            a {
+                color: #c2c2c2;
+                &:hover {
+                    color: #ff2058;
+                }
+            }
+        }
+        .button {
+            background: var(--gradient);
+            color: white;
+            outline: 0;
+            border: 0;
+            border-radius: 0.65rem;
+            font-size: 16px;
+            padding: 0.65rem 2rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            cursor: pointer;
+            &:hover {
+                background-size: 200%;
+            }
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+  
