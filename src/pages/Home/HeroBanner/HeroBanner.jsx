@@ -21,8 +21,8 @@ const HeroBanner = () => {
 
   const { data, loading, error } = useFetch("/movie/upcoming");
   // console.log(data.response)
-  // console.log(loading)
-  console.log(error)
+  console.log(`loading: ${loading}`)
+  // console.log(error)
 
   const baseBackdropURL = 'https://image.tmdb.org/t/p/original';
 
@@ -49,7 +49,7 @@ const HeroBanner = () => {
       <div className="opacity_layer"></div>
       <ContentWrapper>
         <div className="hero_banner_content">
-          <span className="title">Welcome.</span>
+          <span className="title">{loading ? loading : data === "Network Error" ? "Oops !" : "Welcome."}</span>
           <span className="sub_title">Millions of movies, TV shows and people to discover. Explore now.</span>
           <div className="search_input">
             <input type="text" name="" id="" placeholder='Search for a movie or tv show...' onKeyUp={searchQueryHandler} onChange={(e) => setQuery(e.target.value)}/>

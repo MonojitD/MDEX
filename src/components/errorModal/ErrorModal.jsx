@@ -4,6 +4,10 @@ import './error-modal.scss'
 import errorIcon from '../../assets/error.png'
 import { Link } from 'react-router-dom';
 
+function refreshPage(){ 
+  window.location.reload(); 
+}
+
 const ErrorModal = ({ errorMessage }) => {
   if (!errorMessage) return null;
 
@@ -16,7 +20,7 @@ const ErrorModal = ({ errorMessage }) => {
         It seems there is a network issue with the data service provider (TMDB API) when connected through your internet service provider (like Jio network). Please switch to a different network to access the content or try connecting via a VPN (<Link to='https://windscribe.com/'>try Windscribe VPN</Link>).
         </div>
 
-        <Link className='button' to="https://mdex.vercel.app" >Try again</Link>
+        <button className='button' onClick={refreshPage} >Try again</button>
       </div>
     </div>
   );
