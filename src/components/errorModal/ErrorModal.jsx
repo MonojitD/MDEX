@@ -17,10 +17,10 @@ const ErrorModal = ({ errorMessage }) => {
         <img src={errorIcon} alt="" />
         <p className='error_titile'>{errorMessage}</p>
         <div className="error_msg">
-        It seems there is a network issue with the data service provider (TMDB API) when connected through your internet service provider (like Jio network). Please switch to a different network to access the content or try connecting via a VPN (<Link to='https://windscribe.com/'>try Windscribe VPN</Link>).
+        It seems there is a network issue with our data service provider when connected through your internet service provider (like Jio networks don't support our API provider). Please switch to a different network to access the content or connecting via a VPN (<Link to='https://windscribe.com/'> you can try Windscribe VPN </Link>).
         </div>
 
-        <button className='button' onClick={refreshPage} >Try again</button>
+        <button className='button' onClick={refreshPage} >Load again</button>
       </div>
     </div>
   );

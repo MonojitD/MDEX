@@ -2,6 +2,7 @@
 .footer {
     background-color: var(--black3);
     padding: 50px 0;
+    padding-bottom: 0;
     color: white;
     position: relative;
     .contentWrapper {
@@ -65,5 +66,9 @@
                 color: var(--pink);
             }
         }
+    }
+    .sticker {
+        width: 5rem;
+        margin-top: 2rem;
     }
 }
