@@ -51,7 +51,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements 🙏
 
-Special thanks to IMDb for inspiration and to the React.js community for providing excellent tools and resources.
+Special thanks to TMDb for APIs and to the React.js community for providing excellent tools and resources.
 
 ---
 
